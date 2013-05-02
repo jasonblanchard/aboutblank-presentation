@@ -57,7 +57,7 @@ URL: https://code.google.com/p/io-2012-slides
       <ul class="build">
         <li>Look & Feel: Clean, minimal, responsive</li>
         <li>Tell a Story</li>
-        <li>Blog Space</li>
+        <li>Blog Platform</li>
         <li>Display content in interesting ways</li>
       </ul>
     </article>
@@ -66,88 +66,80 @@ URL: https://code.google.com/p/io-2012-slides
   <slide>
     <hgroup>
       <h2>Functional Requirements</h2>
-      <h3>Tell a Story</h3>
+      <h3>Look & Feel</h3>
+      <ul class='build'>
+        <li>Omega sub-theme</li>
+        <li>Display Suite for content type-level layout</li>
+        <li>Custom mobile menu (jQuery) and responsive images (CSS)</li>
+        <li>Pathauto for clear URLs</li>
     </hgroup>
     <article>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Functional Requirements</h2>
+      <h3>Tell a Story</h3>
+    </hgroup>
       <ul>
         <li>TimelineJS - <a href="http://about.blanktech.net/content/about">About:Me</a></li>
       </ul>
-      <pre class="prettyprint" data-lang="php">
-function timelinejs_node_view($node, $view_mode, $langcode) {
-  $timeline_field = $node->field_include_timeline_['und'][0]['value'];
-  if ($timeline_field != 1) {
-    return;
-  }
-    drupal_add_js(array('timelinejs' => array(
-      'embedSource' => "<script type='text/javascript' src='".$GLOBALS['base_url']."/".drupal_get_path('module','timelinejs')."/TimelineJS/compiled/js/storyjs-embed.js'></script>",
-      )), array('type' => 'setting', 'weight' => 10));
-    drupal_add_js(
-        $GLOBALS['base_path'] . drupal_get_path('module','timelinejs') . "/timeline_embed.js", 
-        array('type' => 'file', 'weight' => 0));
-}
+      <article class='smaller'>
+          <pre class="prettyprint" data-lang="php">
+    function timelinejs_node_view($node, $view_mode, $langcode) {
 
-    </pre>
-    </article>
-  </slide>
+      $timeline_field = $node->field_include_timeline_['und'][0]['value'];
 
-  <slide hidden>
-    Hidden slides are left out of the presentation.
+      if ($timeline_field != 1) {
+        return;
+      }
+
+        drupal_add_js(array('timelinejs' => array(
+          'embedSource' => "<script type='text/javascript' src='".$GLOBALS['base_url']."/".drupal_get_path('module','timelinejs')."/TimelineJS/compiled/js/storyjs-embed.js'></script>",
+          )), array('type' => 'setting', 'weight' => 10));
+        drupal_add_js(
+            $GLOBALS['base_path'] . drupal_get_path('module','timelinejs') . "/timeline_embed.js", 
+            array('type' => 'file', 'weight' => 0));
+    }
+
+        </pre>
+        </article>
   </slide>
 
   <slide>
     <hgroup>
-      <h2>Code Slide (with Subtitle Placeholder)</h2>
-      <h3>Subtitle Placeholder</h3>
+        <h2>Functional Requirements</h2>
+        <h3>Blog Platform</h3>
     </hgroup>
     <article>
-      <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
-      <pre class="prettyprint" data-lang="javascript">
-&lt;script type='text/javascript'&gt;
-  // Say hello world until the user starts questioning
-  // the meaningfulness of their existence.
-  function helloWorld(world) {
-    <b>for (var i = 42; --i &gt;= 0;) {
-      alert('Hello ' + String(world));
-    }</b>
-  }
-&lt;/script&gt;
-</pre>
+        <ul>
+            <li><a href="http://about.blanktech.net/content/hello-blog-world">Sample</a></li>
+            <ul class='build'>
+                <li>Custom content type</li>
+                <li>Markdown for rich text</li>
+                <li>Google code prettify for code snippets</li>
+                <li>Semantic timestamps - Timeago jQuery plugin</li>
+                <li>Workbench for content authoring flow</li>
+            </ul>
+        </ul>
     </article>
-  </slide>
+    </slide>
 
-  <slide>
+    <slide>
     <hgroup>
-      <h2>Code Slide (Smaller Font)</h2>
-    </hgroup>
-    <article class="smaller">
-      <pre class="prettyprint" data-lang="javascript">
-// Say hello world until the user starts questioning
-// the meaningfulness of their existence.
-function helloWorld(world) {
-  for (var i = 42; --i &gt;= 0;) {
-    alert('Hello ' + String(world));
-  }
-}
-</pre>
-<pre class="prettyprint" data-lang="css">
-&lt;style&gt;
-  p { color: pink }
-  b { color: blue }
-&lt;/style&gt;
-</pre>
-<pre class="prettyprint" data-lang="html">
-&lt;!DOCTYPE html>
-&lt;html>
-&lt;head>
-  &lt;title>My Awesome Page&lt;/title>
-&lt;/head>
-&lt;body>
-  &lt;p&gt;Hello world&lt;/p&gt;
-&lt;body>
-&lt;/html>
-</pre>
-    </article>
-  </slide>
+        <h2>Functional Requirements</h2>
+        <h3>Display and Filter Data</h3>
+        </hgroup>
+        <img class='pull-right' src='images/feeds_importer.png'>
+        <h1>Feeds Importers</h1>
+        <br />
+        <ul>
+            <li>Content from Twitter, Delicious and Goodreads</li>
+            <li>Turns content into nodes and taxonomy terms</li>
+        </ul>
+    </slide>
+
 
   <slide>
     <aside class="note">
