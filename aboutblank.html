@@ -132,14 +132,100 @@ URL: https://code.google.com/p/io-2012-slides
         <h3>Display and Filter Data</h3>
         </hgroup>
         <img class='pull-right' src='images/feeds_importer.png'>
-        <h1>Feeds Importers</h1>
+        <article>
         <br />
-        <ul>
-            <li>Content from Twitter, Delicious and Goodreads</li>
-            <li>Turns content into nodes and taxonomy terms</li>
-        </ul>
+            <h1>Feeds Importers</h1>
+            <br />
+            <ul>
+                <li>Content from Twitter, Delicious and Goodreads</li>
+                <li>Turns content into nodes and taxonomy terms</li>
+            </ul>
+        </article>
     </slide>
 
+    <slide>
+    <hgroup>
+        <h2>Functional Requirements</h2>
+        <h3>Display and Filter Data</h3>
+        </hgroup>
+        <div class='centered'>
+            <img src='images/feed.png'>
+        </div>
+        <article class='smaller'>
+        <h1>View</h1>
+        <ul>
+            <li><a href='http://about.blanktech.net/feed'>Feed</a></li>
+            <li>Filtered by content type</li>
+            <li>Exposed filter for keywords ('has taxonomy term')</li>
+            <li>Custom menu that points to the feed with additional contextual filters in the URL (content type) to filter by content type</li>
+        </ul>
+        </article>
+    </slide>
+
+    <slide>
+    <hgroup>
+        <h2>Functional Requirements</h2>
+        <h3>Display and Filter Data</h3>
+        </hgroup>
+        <div class='centered'>
+            <img src='images/feed.png'>
+        </div>
+        <article class='smaller'>
+        <h1>Display</h1>
+        <ul>
+            <li>Custom jQuery to show and hide the filter</li>
+            <li>Views Infinite Scroll to automatically pull in new pages as user scrolls</li>
+            <li>Tag Cloud to show most tagged items</li>
+        </ul>
+        </article>
+    </slide>
+
+    <slide>
+    <hgroup>
+    <h2>DevOps</h2>
+    <h3>Methods & Tools</h3>
+        </hgroup>
+        <article>
+            <ul class='build'>
+                <li>Ubuntu VM & Vagrant</li>
+                <li>Git</li>
+                <li>Drush (alias & sql-sync)</li>
+            </ul>
+        </article>
+
+        </slide>
+
+    <slide>
+    <hgroup>
+    <h2>Deployment</h2>
+    <h3>Methods & Tools</h3>
+        </hgroup>
+        <article>
+            <ul class='build'>
+                <li>Dreamhost</li>
+                <li>Aggressive caching</li>
+                <ul>
+                    <li>Boost module for static page cache</li>
+                    <li>Rules to expire cache unders certain conditions</li>
+                    <li><a href="http://about.blanktech.net/sitemap.xml">xmlsitemap</a> and Bash script to warm cache after cron</li>
+                </ul>
+            </ul>
+        </article>
+
+        </slide>
+
+    <slide>
+        <hgroup>
+        <h2>Future Plans</h2>
+        </hgroup>
+        <article>
+            <ul class='build'>
+                <li>Enhancements to feed content</li>
+                <li>Web services endpoints</li>
+            </ul>
+        </article>
+
+    </slide>
 
   <slide>
     <aside class="note">
