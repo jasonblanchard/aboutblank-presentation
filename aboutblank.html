@@ -164,9 +164,9 @@ URL: https://code.google.com/p/io-2012-slides
         <h1>View</h1>
         <ul>
             <li><a href='http://about.blanktech.net/feed' class='no-underline'><button>Feed</button></a></li>
-            <li>Filtered by content type</li>
-            <li>Exposed filter for keywords ('has taxonomy term')</li>
-            <li>Custom menu that points to the feed with additional contextual filters in the URL (content type) to filter by content type</li>
+            <li>Showing specific content types</li>
+            <li><b>Filter by content:</b> Views exposed filter for keywords ('has taxonomy term')</li>
+            <li><b>Filter by type:</b> Custom menu linking to the feed with additional contextual filters in the URL (content type) to filter by content type</li>
         </ul>
         </article>
     </slide>
@@ -189,7 +189,7 @@ URL: https://code.google.com/p/io-2012-slides
            $('.region-header-first').hide();
          }
 
-         $('.region-header-second').html('<a class="button">Filter Feed</a>');
+         $('.region-header-second').html('&lta class="button"&gtFilter Feed&lt/a&gt');
 
          $('.region-header-second a').click( function() {
            $('.region-header-first').slideToggle('fast');
