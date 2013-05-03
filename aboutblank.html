@@ -105,7 +105,8 @@ URL: https://code.google.com/p/io-2012-slides
       }
 
         drupal_add_js(array('timelinejs' => array(
-          'embedSource' => "<script type='text/javascript' src='".$GLOBALS['base_url']."/".drupal_get_path('module','timelinejs')."/TimelineJS/compiled/js/storyjs-embed.js'></script>",
+          'embedSource' => "&ltscript type='text/javascript' src='".$GLOBALS['base_url'] . "/" 
+          . drupal_get_path('module','timelinejs')."/TimelineJS/compiled/js/storyjs-embed.js'&gt&lt/script&gt",
           )), array('type' => 'setting', 'weight' => 10));
         drupal_add_js(
             $GLOBALS['base_path'] . drupal_get_path('module','timelinejs') . "/timeline_embed.js", 
